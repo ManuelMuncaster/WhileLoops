@@ -31,13 +31,14 @@ namespace WhileLoops
             counter = 1;
 
             //test
-            while (counter <= numStars)
+            //while (counter <= numStars)
+            for (counter = 1; counter <= numStars; counter++)
             {
                 //act
                 g.FillEllipse(drawBrush, 20 * counter, 50, 20, 20);
 
                 //change
-                counter = counter + 1;
+                //counter = counter + 1;
             }
         }
 
@@ -47,11 +48,12 @@ namespace WhileLoops
             SolidBrush drawBrush = new SolidBrush(Color.White);
     
             //initialize
-            int x = this.Width-10;
+            int x = 10;
             int y = 150; 		    
             
             //test
-            while (x > 1)	
+           //while (x <= this.Width)	
+             for (x = 10; x <= this.Width; x++)
             {
                 //act
                 g.Clear(Color.Black);
@@ -60,7 +62,7 @@ namespace WhileLoops
                 Thread.Sleep(10);
 
                 //change
-                x = x - 1;	
+                //x = x + 1;	
             }
         }
 
@@ -73,16 +75,18 @@ namespace WhileLoops
             int x = 1;
           	    
             //test
-            while (x < 50)	
+            //while (x < 101)
+            for (x = 1; x < 101; x++)	
             {
                 //act
                 g.Clear(Color.Black);
-                g.FillRectangle(drawBrush, 50 - x / 2, 150 - x / 2, 10 + x, 10 + x);
+              //g.FillRectangle(drawBrush, 50, 150,50 + x, 50 + x);
+               g.FillRectangle(drawBrush, 50 - x / 2, 150 - x / 2, 10 + x, 10 + x);
 
                 Thread.Sleep(10);
 
                 //change
-                x = x + 1;	
+                //x = x + 1;	
             }
         }
 
@@ -95,7 +99,8 @@ namespace WhileLoops
             int x = 1;
 
             //test
-            while (x < 256)
+            //while (x < 256)
+            for (x =1; x < 256; x++)
             {
                 //act
                 g.Clear(Color.Black);
@@ -105,7 +110,7 @@ namespace WhileLoops
                 Thread.Sleep(10);
 
                 //change
-                x = x + 1;
+                //x = x + 1;
             }
         }
     }
